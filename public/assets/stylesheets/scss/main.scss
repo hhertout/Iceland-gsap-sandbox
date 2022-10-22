@@ -1,0 +1,49 @@
+@import './libs/mixin';
+
+main{
+    width: 100vw;
+}
+
+.waterfall-parallax{
+    position: relative;
+    border: 5px solid blue;
+    height: 100vh;
+}
+
+.main-waterfall-wrapper{
+    
+    width: 1072px;
+    height: 1500px;
+    transform: scale(.4) translateY(-50%);
+    transform-origin: top right;
+
+    overflow: hidden;
+    border: 5px solid pink;
+    z-index: 5;
+    
+    position: absolute;
+    right: 5%;
+    top: 50%;
+
+}
+
+.main-waterfall{
+    scale: 1.3;
+
+    @extend %pos-bot;
+}
+
+.main-water-fall-img1{
+    z-index: 4;
+}
+.main-water-fall-img2{
+    z-index: 3;
+    bottom: 70px;
+}
+.main-water-fall-img3{
+    z-index: 2;
+}
+.main-water-fall-img4{
+    display: none;
+    z-index: 1;
+}

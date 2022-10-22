@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=Fjord+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=Fjord+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  color: #303030;
+}
+
+ul {
+  list-style: none;
+}
+
+.home-title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.home-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  margin-block-end: 6rem;
+}
+header .home-image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+header .home-image-wrapper .home-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+header .home-image-wrapper .front-layer {
+  z-index: 12;
+  background-image: url(../../Img/Home/bg-font-layer.png);
+}
+header .home-image-wrapper .back-layer {
+  background-image: url(../../Img/Home/bg-home.jpg);
+  z-index: 10;
+}
+
+.home-title {
+  font-family: "Fjord One", serif;
+  font-size: 4rem;
+  flex-direction: row;
+  margin-top: 5vw;
+  z-index: 11;
+}
+.home-title span {
+  margin: 2rem;
+}
+
+main {
+  display: block;
+}
+
+/*# sourceMappingURL=home.css.map */

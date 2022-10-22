@@ -1,0 +1,16 @@
+@import "root.scss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    color: $dark;
+}
+
+ul{
+    list-style: none;
+}
