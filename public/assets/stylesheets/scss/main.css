@@ -1,6 +1,18 @@
-.main-waterfall {
+.main-waterfall-wrapper .main-waterfall {
   position: absolute;
   bottom: 0;
+}
+
+.waterfall-parallax .waterfall-compass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greenland-parallax, .waterfall-parallax {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 main {
@@ -9,8 +21,61 @@ main {
 
 .waterfall-parallax {
   position: relative;
-  border: 5px solid blue;
-  height: 100vh;
+  height: calc(50vh + 600px);
+  max-width: 1200px;
+  margin: auto;
+}
+.waterfall-parallax .pointer1 {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 60px;
+}
+.waterfall-parallax .pointer2 {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  width: 100px;
+}
+.waterfall-parallax .pointer3 {
+  position: absolute;
+  top: 15%;
+  right: 2%;
+  width: 80px;
+}
+.waterfall-parallax .pointers {
+  opacity: 0.5;
+}
+.waterfall-parallax .waterfall-compass {
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  opacity: 0.4;
+  transition: opacity 0.4s;
+}
+.waterfall-parallax .waterfall-compass p {
+  font-size: 1.5rem;
+  rotate: -30deg;
+  opacity: 0.3;
+  padding-block: 2rem;
+  transform: translate(-35%);
+}
+.waterfall-parallax .waterfall-compass .compass {
+  rotate: -20deg;
+  width: 200px;
+}
+.waterfall-parallax .waterfall-compass:hover {
+  opacity: 0.6;
+  transition: opacity 0.4s;
+}
+
+.waterfall-text {
+  margin-inline-start: 5%;
+  width: 772px;
+}
+.waterfall-text p {
+  font-size: 1.5rem;
 }
 
 .main-waterfall-wrapper {
@@ -19,33 +84,100 @@ main {
   transform: scale(0.4) translateY(-50%);
   transform-origin: top right;
   overflow: hidden;
-  border: 5px solid pink;
   z-index: 5;
   position: absolute;
   right: 5%;
   top: 50%;
 }
-
-.main-waterfall {
+.main-waterfall-wrapper .main-waterfall {
   scale: 1.3;
 }
-
-.main-water-fall-img1 {
+.main-waterfall-wrapper .main-water-fall-img1 {
   z-index: 4;
 }
-
-.main-water-fall-img2 {
+.main-waterfall-wrapper .main-water-fall-img2 {
   z-index: 3;
   bottom: 70px;
 }
-
-.main-water-fall-img3 {
+.main-waterfall-wrapper .main-water-fall-img3 {
   z-index: 2;
 }
-
-.main-water-fall-img4 {
-  display: none;
+.main-waterfall-wrapper .main-water-fall-img4 {
   z-index: 1;
+}
+
+.greenland-parallax {
+  position: relative;
+  height: calc(100vh + 400px);
+  max-width: 1200px;
+  margin: auto;
+  flex-direction: column;
+}
+.greenland-parallax .pointers {
+  position: absolute;
+  opacity: 0.5;
+}
+.greenland-parallax .pointer1 {
+  width: 150px;
+  top: 15%;
+  right: 5%;
+}
+.greenland-parallax .pointer2 {
+  width: 70px;
+  top: 60%;
+  left: 3%;
+}
+.greenland-parallax .greenland-text {
+  position: relative;
+  margin-block-start: 10vh;
+}
+.greenland-parallax .greenland-text p {
+  font-size: 1.5rem;
+}
+.greenland-parallax .greenland-image-wrapper {
+  width: 1500px;
+  height: 1002px;
+  overflow: hidden;
+  scale: 0.5;
+  position: absolute;
+  top: 25%;
+  transform-origin: top;
+}
+.greenland-parallax .greenland-image-wrapper .greenland-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.greenland-parallax .greenland-image-wrapper .layer-bg {
+  z-index: 11;
+}
+.greenland-parallax .greenland-image-wrapper .layer-mid {
+  z-index: 12;
+}
+.greenland-parallax .greenland-image-wrapper .layer-front {
+  z-index: 13;
+}
+
+@media screen and (max-width: 1200px) {
+  .waterfall-parallax {
+    flex-direction: column;
+    height: calc(100vh + 300px);
+  }
+  .waterfall-text {
+    margin-inline: auto;
+    margin-block-start: 200px;
+    width: fit-content;
+  }
+  .waterfall-text p {
+    font-size: 1.5rem;
+  }
+  .main-waterfall-wrapper {
+    margin: auto;
+    right: 25%;
+    top: 25%;
+    transform: scale(0.4) translateY(-50%);
+    transform-origin: right center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

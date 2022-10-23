@@ -9,8 +9,13 @@ body{
     width: 100vw;
     overflow-x: hidden;
     color: $dark;
+    background-color: $white;
 }
 
 ul{
     list-style: none;
+}
+
+p{
+    font-family: $font-body;
 }

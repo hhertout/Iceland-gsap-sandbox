@@ -11,10 +11,15 @@ body {
   width: 100vw;
   overflow-x: hidden;
   color: #303030;
+  background-color: #e9f5ff;
 }
 
 ul {
   list-style: none;
+}
+
+p {
+  font-family: "Elsie", cursive;
 }
 
 .home-title {
