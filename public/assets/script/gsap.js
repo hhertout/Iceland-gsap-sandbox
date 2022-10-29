@@ -1,6 +1,8 @@
+
 //ANIMATION HOME PAGE
-const homePage = document.querySelector(".home-image-wrapper");
-const homeLetters = gsap.utils.toArray(".home-title-letter");
+const homePage = document.querySelector(".home-image-wrapper")
+const homeLetters = gsap.utils.toArray(".home-title-letter")
+const waterFall = gsap.utils.toArray(".main-waterfall")
 
 
 const TLhome = new gsap.timeline({delay:1});
@@ -62,3 +64,20 @@ document.addEventListener('mousemove', (e) => {
         ease: "power3",
     })
 })
+
+//ANIM WATERFALL
+waterFall.forEach(layer => {
+    const depth = layer.dataset.depth;
+    gsap.to(layer, {
+        scrollTrigger : {
+            trigger: '.main-waterfall-wrapper',
+            start : "center bottom",
+            end : "+=600 top", 
+            markers : true,
+            scrub: true,
+        },
+        y : (layer.offsetHeight*depth),
+        scale: 1.5,
+    })
+})
+

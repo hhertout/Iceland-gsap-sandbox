@@ -26,10 +26,10 @@ header{
         }
         .front-layer{
             z-index: 12;
-            background-image: url(../../Img/Home/bg-font-layer.png);
+            background-image: url(./../Img/Home/bg-font-layer.png);
         }
         .back-layer{
-            background-image: url(../../Img/Home/bg-home.jpg);
+            background-image: url(./../Img/Home/bg-home.jpg);
             z-index: 10;
         }
     }
