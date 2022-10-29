@@ -57,7 +57,7 @@ main {
 .waterfall-parallax .waterfall-compass p {
   font-size: 1.5rem;
   rotate: -30deg;
-  opacity: 0.3;
+  opacity: 0.5;
   padding-block: 2rem;
   transform: translate(-35%);
 }

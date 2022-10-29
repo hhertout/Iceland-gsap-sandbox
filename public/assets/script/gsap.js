@@ -3,6 +3,7 @@
 const homePage = document.querySelector(".home-image-wrapper")
 const homeLetters = gsap.utils.toArray(".home-title-letter")
 const waterFall = gsap.utils.toArray(".main-waterfall")
+const greenLandWaterFall = gsap.utils.toArray(".greenland-img")
 
 
 const TLhome = new gsap.timeline({delay:1});
@@ -32,9 +33,9 @@ gsap.to(".front-layer", {
         scrub: true,
     },
     y: () => {
-        return -homePage.offsetHeight / 20;
+        return -(homePage.offsetHeight / 20);
     },
-    scale: 1.2,
+    scale: 1.1,
 })
 gsap.to(".home-title", {
     scrollTrigger: {
@@ -72,10 +73,27 @@ waterFall.forEach(layer => {
         scrollTrigger : {
             trigger: '.main-waterfall-wrapper',
             start : "center bottom",
-            end : "+=600 top", 
+            end : "+=500 top", 
             scrub: true,
         },
         y : (layer.offsetHeight*depth),
-        scale: (1.5+1.5*depth),
+        scale: (1.7+1.5*depth),
+    })
+})
+
+
+//GREENLAND WATERFALL ANIM
+
+greenLandWaterFall.forEach(layer => {
+    const depth = layer.dataset.depth;
+    gsap.to(layer, {
+        scrollTrigger : {
+            trigger: '.greenland-image-wrapper',
+            start : "center bottom",
+            end : "bottom top", 
+            scrub: true,
+        },
+        y : -(layer.offsetHeight*depth),
+        scale: (1.1+1.02*depth),
     })
 })
