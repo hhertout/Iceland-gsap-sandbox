@@ -97,3 +97,20 @@ greenLandWaterFall.forEach(layer => {
         scale: (1.1+1.02*depth),
     })
 })
+
+gsap.from('.greenland-text', {
+    scrollTrigger: {
+        trigger: '.greenland-text',
+        start: 'bottom bottom',
+        scrub: true,
+    },
+    opacity : 0,
+})
+gsap.from('.waterfall-text', {
+    scrollTrigger: {
+        trigger: '.waterfall-text',
+        start: 'bottom bottom',
+        scrub: true,
+    },
+    opacity : 0,
+})
