@@ -111,13 +111,15 @@ main{
 }
 
 .greenland-parallax{
-
+    height: 80vh;
     position: relative;
-    height: calc(100vh + 400px);
     max-width: 1200px;
     margin: auto;
     @extend %flex-between;
     flex-direction: column;
+
+    margin-top: 10vh;
+    margin-bottom: -200px;
 
     
     .pointers{
@@ -136,8 +138,8 @@ main{
     }
 
     .greenland-text {
+        /* margin-block-start: 10vh; */
         position: relative;
-        margin-block-start: 10vh;
 
         p{
             font-size: 1.5rem;
