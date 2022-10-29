@@ -73,11 +73,9 @@ waterFall.forEach(layer => {
             trigger: '.main-waterfall-wrapper',
             start : "center bottom",
             end : "+=600 top", 
-            markers : true,
             scrub: true,
         },
         y : (layer.offsetHeight*depth),
-        scale: 1.5,
+        scale: (1.5+1.5*depth),
     })
 })
-
